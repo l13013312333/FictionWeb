@@ -1,6 +1,7 @@
-<html ng-app>//啟動AngularJS的關鍵字眼
+<html ng-app><!--ng-app : 啟動AngularJS的關鍵字眼-->
     <title>文青坊</title>
     <script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
 <body>
     <h1>文青坊</h1>
     <p>圖文作家們的談笑天地。</p>
@@ -11,7 +12,7 @@
     </form>
 
     <ul>
-        <li></li>
+        <li ng-repeat="item in todoList">{{item.label}}</li>
     </ul>
     
 </body>
