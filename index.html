@@ -5,11 +5,17 @@
     <title>文青坊</title>
     <script type="text/javascript" src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
     <script type="text/javascript" src="js/controllers.js"></script>
+    <script language="JavaScript">
+        function showTime(){
+            document.getElementById('SHOW').innerHTML = new Date();
+
+        }
+    </script>
 </head>
-<body ng-controller="TodoCtrl">
+<body ng-controller="TodoCtrl" onload="showTime()">
     <h1>文青坊</h1>
     <p>圖文作家們的談笑天地。</p>
-    <p>第4次更新</p>
+    <p id="SHOW"></p>更新。
 
     <form ng-submit="addItem()">
         <input type="text" ng-model="newItem" name="newItem"/>
