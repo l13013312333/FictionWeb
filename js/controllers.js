@@ -1,4 +1,4 @@
-function TodoCrtl($scope){
+function TodoCtrl($scope){
     $scope.newItem="";
     $scope.todoList = [];
 
