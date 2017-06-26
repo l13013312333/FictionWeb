@@ -5,7 +5,7 @@ function TodoCtrl($scope){
     $scope.addItem = function(){
         if(this.newItem){
             THIS.todoList.push({label: this.newItem});
-            this.newItem="";
+            this.newItem = "";
         }
     }
 }
