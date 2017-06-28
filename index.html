@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <link href='images/Favicon.ico' rel='icon' type='image/icon'/>
     <link href='css/app.component.css' rel='stylesheet' type='text/css'/>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 <body>
     <h1>文青坊</h1>
     <p>圖文作家們的談笑天地。</p>
-    <p>更新1</p>
+    <div>
+        <p>名字: <input type="text" ng-model="name"></p>
+        <h1>Hello {{name}} !!</h1>
+    </div>
 
 </body>
 </html>
