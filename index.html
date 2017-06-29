@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!--google sign-in-->
     <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="AIzaSyA0Gz-c-o8xGGM1WxsS47-gTMETzkaD_5E">
+    <meta name="google-signin-client_id" content="510527958163-dep68pr0fm4rcsf1fu2ck3ekmddqrck5.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link href='images/Favicon.ico' rel='icon' type='image/icon'/>
     <link href='css/app.component.css' rel='stylesheet' type='text/css'/>
@@ -30,6 +30,15 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
       };
+    </script>
+    <a href="#" onclick="signOut();">Sign out</a>
+    <script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+        console.log('User signed out.');
+        });
+    }
     </script>
 </body>
 </html>
