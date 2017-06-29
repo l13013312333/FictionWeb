@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html ng-app><!--ng-app : 啟動AngularJS的關鍵字眼-->
+<html lang="en" ng-app><!--ng-app : 啟動AngularJS的關鍵字眼-->
 <head>
     <meta charset="utf-8">
+    <!--google sign-in-->
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="AIzaSyA0Gz-c-o8xGGM1WxsS47-gTMETzkaD_5E">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <link href='images/Favicon.ico' rel='icon' type='image/icon'/>
     <link href='css/app.component.css' rel='stylesheet' type='text/css'/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
 </head>
 <body>
     <h1>文青坊</h1>
@@ -13,6 +18,22 @@
         <p>名字: <input type="text" ng-model="name"></p>
         <h1>Hello {{name}} !!</h1>
     </div>
+     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
 
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
 </body>
 </html>
