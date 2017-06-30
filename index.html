@@ -22,14 +22,11 @@
 		</div>
     </div>
     <script>
-        function roading(){
-            var bar = 0;
-            count();
-            document.getElementById("progressbar").style.width = bar;
-        }
-
+        var bar = 0;
+        count();
+        document.getElementById("progressbar").style.width = bar;
         function count(){
-            bar += 4;
+            bar = bar + 4;
             if(bar < 99){
                 setTimeout("count()", 100);
             }
