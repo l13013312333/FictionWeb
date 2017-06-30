@@ -1,4 +1,3 @@
-document.write("高度 :" + document.body.clientHeight + " 寬度 : " + document.body.clientWidth);
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
     var profile = googleUser.getBasicProfile();

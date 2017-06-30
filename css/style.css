@@ -4,12 +4,11 @@ h1{
     font-size: 250%;
 }
 @media screen and (max-width: 600px) {
-    body {
-        background-color:yellow;
-    }
+    
 }
-@media screen and (max-width: 300px) {
-    body {
-        background-color:lightblue;
-    }
+@media screen and (max-width: 399px) {
+    
+}
+.g-signin2{
+    float:right;
 }
