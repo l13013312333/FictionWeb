@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app><!--ng-app : 啟動AngularJS的關鍵字眼-->
+<html lang="zh" ng-app><!--ng-app : 啟動AngularJS的關鍵字眼-->
 <head>
     <title>文青坊</title>
     <meta charset="utf-8">
@@ -10,39 +10,33 @@
     <link href='images/Favicon.ico' rel='icon' type='image/icon'/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <link href='css/style.css' rel='stylesheet' type='text/css'/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body>
-    <div class="theme">
-        <h1>文青坊</h1>
-        <p>圖文作家們的談笑天地。</p>
-    </div>
+<body onload="roading();">
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <a href="#" onclick="signOut();">登出</a>
-    <center>
-        網頁資料載入中,請稍候......
-        <form name="loading">
-        <input name="chart" size="29" style="background-color:white;color:#0000CC; font-family:Arial;font-weight:bolder;border-style:none;padding:0px"><br><input name="percent" size="2">
-        </form>
-        </center>
-        <script>
-            var bar = 0  
-            var line = "||"  
-            var amount ="||"  
+    <div class="col-md-offset-3 col-md-6">
+        <div class="progress">
+		    <div id="progressbar" class="progress-bar progress-bar-success progress-bar-striped active" style="width: 100%;"></div>
+		</div>
+    </div>
+    <script>
+        function roading(){
+            var bar = 0;
             count();
-            function count(){  
-            bar= bar+3  
-            amount =amount  +  line  
-            document.loading.chart.value=amount  
-            document.loading.percent.value=bar+"%"  
-            if (bar<99)  
-            {setTimeout("count()",100);}  
-            else  
-            {window.location = "literature.html";}  
+            document.getElementById("progressbar").style.width = bar;
+        }
+
+        function count(){
+            bar += 4;
+            if(bar < 99){
+                setTimeout("count()", 100);
             }
-        </script>
-
-
+            else{
+                //正式進入網站內容
+            }
+        }
+    </script>
 </body>
 </html>
