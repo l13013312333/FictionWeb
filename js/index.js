@@ -1,7 +1,3 @@
-$(window).resize(function() {
-    wdth=$(window).width();
-    $("span").text(wdth);
-});
 
 function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
