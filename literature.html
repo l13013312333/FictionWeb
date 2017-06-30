@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app><!--ng-app : 啟動AngularJS的關鍵字眼-->
 <head>
-    <title>文青坊</title>
+    <title>文青坊-文學館</title>
     <meta charset="utf-8">
     <!--google sign-in-->
     <meta name="google-signin-scope" content="profile email">
@@ -18,31 +18,7 @@
         <h1>文青坊</h1>
         <p>圖文作家們的談笑天地。</p>
     </div>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
     <a href="#" onclick="signOut();">登出</a>
-    <center>
-        網頁資料載入中,請稍候......
-        <form name="loading">
-        <input name="chart" size="29" style="background-color:white;color:#0000CC; font-family:Arial;font-weight:bolder;border-style:none;padding:0px"><br><input name="percent" size="2">
-        </form>
-        </center>
-        <script>
-            var bar = 0  
-            var line = "||"  
-            var amount ="||"  
-            count();
-            function count(){  
-            bar= bar+3  
-            amount =amount  +  line  
-            document.loading.chart.value=amount  
-            document.loading.percent.value=bar+"%"  
-            if (bar<99)  
-            {setTimeout("count()",100);}  
-            else  
-            {window.location = "literature.html";}  
-            }
-        </script>
-
-
+    
 </body>
 </html>
