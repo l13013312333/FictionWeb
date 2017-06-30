@@ -24,9 +24,9 @@
     <script>
         var bar = 0;
         count();
-        document.getElementById("progressbar").style.width = bar+ "%";
         function count(){
             bar = bar + 4;
+            document.getElementById("progressbar").style.width = bar+"%";
             if(bar < 99){
                 setTimeout("count()", 100);
             }
