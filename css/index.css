@@ -58,7 +58,7 @@
 {
 	0%   {width:300px; height:600px; vertical-align : middle;}
 	50%   {width:300px; height:600px;}
-	100%  {left:0px; top:0px; width:240px; height:450px;}
+	100%  {left:0px; top:0px; width:240px; height:450px; vertical-align : left;}
 }
 #container{
 	text-align: center;
