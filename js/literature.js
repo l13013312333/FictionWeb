@@ -20,7 +20,7 @@ function signOut() {
     });
 }
 
-var isSi = googleAuth.isSignedIn.get();
+var isSi = gapi.auth2.isSignedIn.get();
 if(isSi){
     
 }

@@ -11,6 +11,8 @@ function onSignIn(googleUser) {
      // The ID token you need to pass to your backend:
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("ID Token: " + id_token);
+    document.getElementById("header").style.float = "left";
+    document.getElementById("header").styel.width = "200px";
 };
 
 function signOut() {
