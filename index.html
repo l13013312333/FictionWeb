@@ -20,6 +20,7 @@
     <!-- header -->
     <div id="header">
         <img src="images/LOGO.png" width="320" height="600" />
+        <div class="g-signin2" id="Gsign" data-onsuccess="onSignIn" data-theme="dark"></div>
     </div>
     <!-- container -->
     <div id="container">
@@ -28,8 +29,6 @@
                 <div id="progressbar" class="progress-bar progress-bar-success progress-bar-striped active" style="width: 0%;"></div>
             </div>
         </div>
-        <div class="g-signin2" id="Gsign" data-onsuccess="onSignIn" data-theme="dark"></div>
-        <a href="#" onclick="signOut();">登出</a>
     </div>
 
     <script>
@@ -37,7 +36,7 @@
         var bar = 0;
         count();
         function count(){
-            bar = bar + 1;
+            bar = bar + 3;
             document.getElementById("progressbar").style.width = bar+"%";
             if(bar < 105){
                 setTimeout("count()", 100);
