@@ -19,3 +19,11 @@ function signOut() {
     console.log('User signed out.');
     });
 }
+
+var isSi = googleAuth.isSignedIn.get();
+if(isSi){
+    
+}
+else{
+    location.href("index.html");
+}
