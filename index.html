@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstap.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
     <!-- header -->
@@ -38,7 +37,7 @@
         function count(){
             bar = bar + 4;
             document.getElementById("progressbar").style.width = bar+"%";
-            if(bar < 101){
+            if(bar < 102){
                 setTimeout("count()", 100);
             }
             else{
