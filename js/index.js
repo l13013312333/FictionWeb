@@ -4,7 +4,7 @@ count();
 function count(){
     bar = bar + 4;
     document.getElementById("progressbar").style.width = bar+"%";
-    if(bar < 99){
+    if(bar < 101){
         setTimeout("count()", 100);
     }
     else{
