@@ -52,6 +52,9 @@
 	height: 5%;
 	width: 100%;
 	padding: 5% 0;
-	position: fixed;
+	position: absolute;
 	bottom: 20%;
+}
+#Gsign{
+	text-align: center;
 }
