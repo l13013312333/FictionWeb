@@ -14,7 +14,8 @@
 <body>
     <!-- header -->
     <div id="header">
-        <img src="images/LOGO.png" width="320" height="600" />
+        <div id="animate"></div>
+        <div id="menu"></div>
     </div>
     <!-- container -->
     <div id="container">
@@ -26,7 +27,6 @@
     </div>
 
     <script>
-        document.getElementById("Gsign").style.visibility="hidden";
         var bar = 0;
         count();
         function count(){
@@ -37,7 +37,6 @@
             }
             else{
                 //正式進入網站內容
-                document.getElementById("Gsign").style.visibility="visible";
                 document.getElementById("progress").style.visibility="hidden";
                 document.getElementById("progressbar").style.visibility="hidden";
             }
