@@ -43,3 +43,9 @@
 @keyframes animate-positive{
 	0% { width: 0; }
 }
+#header{
+	text-align: center;
+	height: 70%;
+	width: 100%;
+	position: fixed;
+}
