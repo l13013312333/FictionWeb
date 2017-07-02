@@ -1,3 +1,8 @@
+
+@media screen and(max-width: 860px){
+	#menu{width: 600px;}
+}
+
 .progress{
 	height: 25px;
 	background: #262626;
@@ -41,10 +46,24 @@
 	0% { width: 0; }
 }
 #header{
-	height: 70%;
+	display:inline-block;
+	background-color: blue;
+	height: 620px;
 	width: 100%;
 	position: fixed;
 	padding: 10px;
+}
+
+#login{
+	float: left;
+	height: 600px;
+	width: 30%;
+}
+#menu{
+	background-color: red;
+	float:right;
+	width: 70%;
+	height: 100%;
 }
 #animate{
 	left:0px;
@@ -72,10 +91,4 @@
 }
 #Gsign{
 	text-align: center;
-}
-body{
-	
-}
-#menu{
-	background-color: blueviolet;
 }
